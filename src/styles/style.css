@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: white;
+}
+
+note-list {
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+}
+
+.toastify-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1200px) {
+  .note-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .note-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .wrapper {
+    padding: 20px;
+  }
+
+  header .brand-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input_section {
+    width: 95%;
+  }
+
+  .note-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .input_section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .input_section h2 {
+    font-size: 20px;
+  }
+
+  form :where(input, textarea) {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  form .input textarea {
+    height: 100px;
+  }
+
+  form button {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .note-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .note-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
